@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatstryShopWebApp", "PatstryShopWebApp\PatstryShopWebApp.csproj", "{BBA91B2D-6AF8-49CE-8D34-ABA4FBC3CFAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBA91B2D-6AF8-49CE-8D34-ABA4FBC3CFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA91B2D-6AF8-49CE-8D34-ABA4FBC3CFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA91B2D-6AF8-49CE-8D34-ABA4FBC3CFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA91B2D-6AF8-49CE-8D34-ABA4FBC3CFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F812802-4314-422E-A1B9-39A8FB03C3BA}
+	EndGlobalSection
+EndGlobal
