@@ -21,8 +21,11 @@ namespace PatstryShopWebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             conn.ConnectionString = "server=(local); database=Bakery; Integrated Security = SSPI";
-            conn.Open();
+            if (!IsPostBack)
+            {
+                conn.Open();
             
             cmd.Connection = conn;
             cmd.CommandText = "Select * from Pastry where categoryId = 1";
@@ -59,8 +62,7 @@ namespace PatstryShopWebApp
             }
             conn.Close();
 
-            if (!IsPostBack)
-            {
+            
                 // On first page load:  if logged in as admin
                 if ((string)Session["THREAD"] == "admin")
                 {
@@ -185,6 +187,7 @@ namespace PatstryShopWebApp
                 string pastryDesc = reader[2].ToString();
                 string pastryPrice = reader[3].ToString();
 
+
                 if (count == 1)
                 {
                     Button1.Text = pastryName;
@@ -245,6 +248,12 @@ namespace PatstryShopWebApp
 
         protected void Button_minus_Click(object sender, EventArgs e)
         {
+            items_selected--;
+            Label_display_total_items.Text = items_selected.ToString();
+
+            price = Convert.ToDouble(Label_item_price.Text);
+            total_price -= price;
+            Label_display_total_price.Text = total_price.ToString("C", CultureInfo.CurrentCulture);
 
         }
     }
