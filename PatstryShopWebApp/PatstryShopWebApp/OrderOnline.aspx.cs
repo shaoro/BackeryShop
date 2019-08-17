@@ -45,22 +45,25 @@ namespace PatstryShopWebApp
                     Button1.Text = pastryName;
                     Button1.Visible = true;
                     Label_1_desc.Text = pastryDesc;
-                    Label_1_price.Text = pastryPrice;
-                }
+                        price = Convert.ToDouble(pastryPrice);
+                        Label_1_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                    }
                 if (count == 2)
                 {
                     Button2.Text = pastryName;
                     Button2.Visible = true;
                     Label_2_desc.Text = pastryDesc;
-                    Label_2_price.Text = pastryPrice;
-                }
+                        price = Convert.ToDouble(pastryPrice);
+                        Label_2_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                    }
                 if (count == 3)
                 {
                     Button3.Text = pastryName;
                     Button3.Visible = true;
                     Label_3_desc.Text = pastryDesc;
-                    Label_3_price.Text = pastryPrice;
-                }
+                        price = Convert.ToDouble(pastryPrice);
+                        Label_3_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                    }
                 count++;
             }
             conn.Close();
@@ -115,21 +118,24 @@ namespace PatstryShopWebApp
                     Button1.Text = pastryName;
                     Button1.Visible = true;
                     Label_1_desc.Text = pastryDesc;
-                    Label_1_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_1_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 if (count == 2)
                 {
                     Button2.Text = pastryName;
                     Button2.Visible = true;
                     Label_2_desc.Text = pastryDesc;
-                    Label_2_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_2_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 if (count == 3)
                 {
                     Button3.Text = pastryName;
                     Button3.Visible = true;
                     Label_3_desc.Text = pastryDesc;
-                    Label_3_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_3_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 count++;
             }
@@ -155,21 +161,24 @@ namespace PatstryShopWebApp
                     Button1.Text = pastryName;
                     Button1.Visible = true;
                     Label_1_desc.Text = pastryDesc;
-                    Label_1_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_1_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 if (count == 2)
                 {
                     Button2.Text = pastryName;
                     Button2.Visible = true;
                     Label_2_desc.Text = pastryDesc;
-                    Label_2_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_2_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 if (count == 3)
                 {
                     Button3.Text = pastryName;
                     Button3.Visible = true;
                     Label_3_desc.Text = pastryDesc;
-                    Label_3_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_3_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 count++;
             }
@@ -196,21 +205,24 @@ namespace PatstryShopWebApp
                     Button1.Text = pastryName;
                     Button1.Visible = true;
                     Label_1_desc.Text = pastryDesc;
-                    Label_1_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_1_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 if (count == 2)
                 {
                     Button2.Text = pastryName;
                     Button2.Visible = true;
                     Label_2_desc.Text = pastryDesc;
-                    Label_2_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_2_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 if (count == 3)
                 {
                     Button3.Text = pastryName;
                     Button3.Visible = true;
                     Label_3_desc.Text = pastryDesc;
-                    Label_3_price.Text = pastryPrice;
+                    price = Convert.ToDouble(pastryPrice);
+                    Label_3_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
                 }
                 count++;
             }
@@ -222,7 +234,8 @@ namespace PatstryShopWebApp
             Image_item_display.ImageUrl = "";
             Label_item_name.Text = Button1.Text;
             Label_item_desc.Text = Label_1_desc.Text;
-            Label_item_price.Text = Label_1_price.Text;
+            price = Convert.ToDouble(Label_1_price.Text.TrimStart('$'));
+            Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -230,7 +243,8 @@ namespace PatstryShopWebApp
             Image_item_display.ImageUrl = "";
             Label_item_name.Text = Button2.Text;
             Label_item_desc.Text = Label_2_desc.Text;
-            Label_item_price.Text = Label_2_price.Text;
+            price = Convert.ToDouble(Label_2_price.Text.TrimStart('$'));
+            Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -238,13 +252,14 @@ namespace PatstryShopWebApp
             Image_item_display.ImageUrl = "";
             Label_item_name.Text = Button3.Text;
             Label_item_desc.Text = Label_3_desc.Text;
-            Label_item_price.Text = Label_3_price.Text;
+            price = Convert.ToDouble(Label_3_price.Text.TrimStart('$'));
+            Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
         }
 
         protected void Button_add_Click(object sender, EventArgs e)
         {
             items_selected++;
-            price = Convert.ToDouble(Label_item_price.Text);
+            price = Convert.ToDouble(Label_item_price.Text.TrimStart('$'));
             total_price += price;
             
             Label_display_total_items.Text = items_selected.ToString();

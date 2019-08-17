@@ -6,6 +6,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
+    <asp:Label ID="Label_total_price" runat="server" Text="Label"></asp:Label>
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 
@@ -15,7 +17,7 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder5" runat="server">
 
-    <asp:Button ID="Button_to_payment" runat="server" Text="Proceed to Payment Details" />
+    <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" />
 
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder6" runat="server">

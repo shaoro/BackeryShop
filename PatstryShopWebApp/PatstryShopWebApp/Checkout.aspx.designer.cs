@@ -22,6 +22,15 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.ListBox ListBox1;
         
         /// <summary>
+        /// Label_total_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_total_price;
+        
+        /// <summary>
         /// Button_to_payment control.
         /// </summary>
         /// <remarks>
