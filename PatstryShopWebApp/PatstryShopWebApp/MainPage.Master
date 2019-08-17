@@ -8,59 +8,95 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
+        body {
+            background-image: url("image/background2.jpeg");
+        }
+
+        header {
+            text-align: center;
+        }
+        h1 {
+            color: brown;
+        }
+        ul {
+            list-style-type: none;
+            background-color:antiquewhite;
+            margin:0;
+            padding: 0;
+            height: 60px;
+            overflow: hidden;
+            border-top: 1px inset brown;
+            border-buttom: 1px inset brown;
+       }
+
+       li {
+            float: left;
+            padding: 2px 30px;
+       }
+
+        li a {
+            display: block;
+            color:brown;
+            padding: 14px 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color:;
+        }
+
+        .active {
+            background-color: chocolate;
+        }
+
+        #login {
+            float: right;
+        }  
+        
+        footer {
+            box-sizing: border-box;
+            text-align: center;
+            border-top: 1px inset brown;
+            border-buttom: 1px inset brown;
+            background-color:antiquewhite;
+        }
+        .footer {
+            display: inline-block;
+            padding: 2px 75px;
+            margin:auto;
+        }
+        
         .auto-style1 {
-            width: 1439px;
-            border: 2px solid #000000;
-            background-color: #FFFFFF;
+            width: 554px;
+            height: 118px;
         }
+        
         .auto-style2 {
-            width: 71px;
+            width: 459px;
+            height: 101px;
         }
-        .auto-style4 {
-            width: 1440px;
-            border: 2px solid #000000;
-            background-color: #EFEFE4;
-        }
-        .auto-style6 {
-            width: 93px;
-        }
-        .auto-style7 {
-            width: 166px;
-        }
-        .auto-style8 {
-            width: 414px;
-        }
-        .auto-style9 {
-            width: 349px;
-        }
+        
     </style>
 </head>
 <body style="background-color: #f2e6d9">
     <br />
     <form id="form1" runat="server">
-        
+       
     <header>
-        <table class="auto-style1">
-            <tr>
-                <td>&nbsp;</td>
-                <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style8">
-                    <asp:Button ID="Button_menu" runat="server" Text="Menu" />
-                </td>
-                <td>
-                    <asp:Button ID="Button_orderOnline" runat="server" Text="Order Online" />
-                </td>
-                <td>
-                    <asp:Button ID="Button_login" runat="server" Text="Login" />
-                </td>
-                <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-            </tr>
-        </table>
+        <img src="image/logo.PNG" class="auto-style2" />
+        <br />
+        <br />
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>Menu</a></li>
+            <li><a>Order Online</a></li>
+            <li><a>Contact</a></li>
+            <li id="login"><a>Login</a></li>
+        </ul>
     </header>
-        <div>
-            
-            <table cellpadding="2" class="auto-style4">
+        <div> 
+            <table cellpadding="2" class="auto-style1">
                 <tr>
                     <td style="height: 300px; background-color: #ffe6e6"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">CONTENT area 1
                         </asp:ContentPlaceHolder></td>
@@ -82,34 +118,23 @@
         </div>
         
     <footer>
+        <div class="footer">
+            <h1>Address</h1>
+            <p>1430 Trafalgar Rd</p>
+            <p>Oakville, ON L6H 2L1</p>
+        </div>
 
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style9">&nbsp;</td>
-                <td>
-                    <asp:Label ID="Label1" runat="server" Text="Address"></asp:Label>
-                </td>
-                <td>
-                    <asp:Label ID="Label2" runat="server" Text="Phone"></asp:Label>
-                </td>
-                <td>
-                    <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style9">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
-            </tr>
-        </table>
+        <div class="footer">
+            <h1>Hours</h1>
+            <p>Mon - Fri: 8:00am - 7:00pm</p>
+            <p>Sat - Sun: 8:00am - 4:00pm</p>
+        </div>
 
+         <div class="footer">
+            <h1>Contact</h1>
+            <p>905-845-9430</p>
+            <p>info@jsbakery.com</p>
+        </div>
     </footer>
     </form>
     </body>
