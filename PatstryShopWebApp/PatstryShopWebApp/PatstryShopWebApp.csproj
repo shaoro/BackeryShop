@@ -70,10 +70,36 @@
     <Content Include="Admin.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="image\background2.jpeg" />
+    <Content Include="image\Cakes\chocmousse.jpg" />
+    <Content Include="image\Cupcakes\CakePops.jpg" />
+    <Content Include="image\Cupcakes\dark.jpg" />
+    <Content Include="image\Cupcakes\Pinky.jpg" />
+    <Content Include="image\Cupcakes\Smore.jpg" />
+    <Content Include="image\Cupcakes\sweetbites.jpg" />
+    <Content Include="image\Cupcakes\Velvet.jpg" />
+    <Content Include="image\Cakes\ferrero.jpg" />
+    <Content Include="image\Cakes\LemonLover.jpg" />
+    <Content Include="image\Cakes\mocha.jpg" />
+    <Content Include="image\Cakes\Oreo.jpg" />
+    <Content Include="image\Cakes\strawberry.jpg" />
+    <Content Include="image\Cakes\velvet.jpg" />
+    <Content Include="image\Cookies\ChocolateChunk.jpg" />
+    <Content Include="image\Cookies\DoubleChocolateChunk.jpg" />
+    <Content Include="image\Cookies\DoubleChocolateMint.jpg" />
+    <Content Include="image\Cookies\M&amp;M.jpg" />
+    <Content Include="image\Cookies\OatmealRaisin.jpg" />
+    <Content Include="image\Cookies\PeanutButter.jpg" />
+    <Content Include="image\Cookies\Snickerdoodle.jpg" />
+    <Content Include="image\Cookies\Sugar.jpg" />
+    <Content Include="image\Cookies\WhiteChocolateMacadamia.jpg" />
     <Content Include="image\logo.PNG" />
+    <Content Include="image\Side.png" />
     <Content Include="OrderOnline.aspx" />
     <Content Include="Payment.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Menu.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="WebForm3.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.aspx.cs">
@@ -113,6 +139,27 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainPage.Master" />
