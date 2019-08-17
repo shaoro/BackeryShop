@@ -130,6 +130,15 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.Image Image_item_display;
         
         /// <summary>
+        /// Label_item_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_item_name;
+        
+        /// <summary>
         /// Label_item_desc control.
         /// </summary>
         /// <remarks>
@@ -202,12 +211,12 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.Label Label_display_total_price;
         
         /// <summary>
-        /// Button4 control.
+        /// Button_to_checkout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button Button_to_checkout;
     }
 }

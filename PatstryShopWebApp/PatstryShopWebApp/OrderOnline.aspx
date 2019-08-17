@@ -42,6 +42,8 @@
 
     <asp:Image ID="Image_item_display" runat="server" />
     <br />
+    <asp:Label ID="Label_item_name" runat="server" Text="Label"></asp:Label>
+    <br />
     <asp:Label ID="Label_item_desc" runat="server" Text="Label"></asp:Label>
     <br />
     <asp:Label ID="Label_item_price" runat="server" Text="Label"></asp:Label>
@@ -89,7 +91,7 @@
         <tr>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style15">
-                <asp:Button ID="Button4" runat="server" Text="Button" />
+                <asp:Button ID="Button_to_checkout" runat="server" OnClick="Button_to_checkout_Click" Text="Proceed to Checkout" />
             </td>
             <td>&nbsp;</td>
         </tr>
