@@ -1,26 +1,108 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="PatstryShopWebApp.Checkout" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="ContentArea" ContentPlaceHolderID="MainContent" runat="server">
+    <style type="text/css">
+        #CheckoutBody {
+            background-color:antiquewhite;
+        }
+    </style>
+    <div id="CheckoutBody">
+    <table cellpadding="2" class="auto-style1">
+        <tr>
+            <td class="auto-style3">
+                <asp:Label ID="Label_item_1" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style4">
+                <asp:Label ID="Label_qty_1" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style2">
+                <asp:Label ID="Label_pr_1" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <asp:Label ID="Label_item_2" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style4">
+                <asp:Label ID="Label_qty_2" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style2">
+                <asp:Label ID="Label_pr_2" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <asp:Label ID="Label_item_3" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style4">
+                <asp:Label ID="Label_qty_3" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style2">
+                <asp:Label ID="Label_pr_3" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <asp:Label ID="Label_item_4" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style4">
+                <asp:Label ID="Label_qty_4" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style2">
+                <asp:Label ID="Label_pr_4" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <asp:Label ID="Label_item_5" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style4">
+                <asp:Label ID="Label_qty_5" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style2">
+                <asp:Label ID="Label_pr_5" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <asp:Label ID="Label_item_6" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style4">
+                <asp:Label ID="Label_qty_6" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td class="auto-style2">
+                <asp:Label ID="Label_pr_6" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+        </tr>
+    </table>
 
-    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
 
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <asp:Label ID="Label_total_price" runat="server" Text="Label"></asp:Label><br />
 
-    <asp:Label ID="Label_total_price" runat="server" Text="Label"></asp:Label>
 
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
-
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder5" runat="server">
 
     <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" />
 
-</asp:Content>
-<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder6" runat="server">
 
+</asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+
+        .auto-style1 {
+            width: 27%;
+            border-collapse: collapse;
+            height: 100%;
+            border: 2px solid #000000;
+        }
+        .auto-style2 {
+            width: 170px;
+        }
+        .auto-style3 {
+            width: 266px;
+        }
+        .auto-style4 {
+            width: 68px;
+        }
+    </style>
+    </div>
 </asp:Content>
 
