@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="Payment.aspx.cs" Inherits="PatstryShopWebApp.Checkout" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="PaymentPage.aspx.cs" Inherits="PatstryShopWebApp.Checkout" %>
+<asp:Content ID="ContentArea" ContentPlaceHolderID="MainContent" runat="server">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="Label6" runat="server" Text="Please Select Your Pickup Time"></asp:Label>
@@ -19,7 +19,7 @@
     <br />
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:DropDownList ID="DropDownList2" runat="server" CssClass="auto-style13" Height="18px" Width="315px">
+    <asp:DropDownList ID="DropDownList2" runat="server" CssClass="auto-style13" Height="16px" Width="173px">
         <asp:ListItem>Sunday</asp:ListItem>
         <asp:ListItem>Monday</asp:ListItem>
         <asp:ListItem>Tuesday</asp:ListItem>
@@ -30,19 +30,16 @@
     </asp:DropDownList>
     <br />
 
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 
     <table cellpadding="2" class="auto-style10">
         <tr>
             <td>
-                <asp:Label ID="Label_final_price" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label_final_price" runat="server" Text="Total"></asp:Label>
             </td>
             <td>&nbsp;</td>
-            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style11">
+                <asp:Label ID="Label_ttl_price" runat="server" Text="Label"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td>
@@ -64,33 +61,7 @@
         </tr>
     </table>
 
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
-
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder5" runat="server">
 
     <asp:Button ID="Button_submit_pay" runat="server" Text="Process Payment" />
-&nbsp;
 
-</asp:Content>
-<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder6" runat="server">
-
-</asp:Content>
-<asp:Content ID="Content7" runat="server" contentplaceholderid="head">
-    <style type="text/css">
-        .auto-style10 {
-            width: 457px;
-            border: 2px solid #000000;
-        }
-        .auto-style11 {
-            width: 119px;
-        }
-        .auto-style12 {
-            margin-left: 13px;
-        }
-        .auto-style13 {
-            margin-left: 16px;
-        }
-    </style>
-</asp:Content>
+    </asp:Content>

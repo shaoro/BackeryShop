@@ -47,6 +47,10 @@ namespace PatstryShopWebApp
                     Label_1_desc.Text = pastryDesc;
                         price = Convert.ToDouble(pastryPrice);
                         Label_1_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                        Label_item_name.Text = pastryName;
+                        Label_item_desc.Text = pastryDesc;
+                        Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+
                     }
                 if (count == 2)
                 {
@@ -271,15 +275,15 @@ namespace PatstryShopWebApp
 
         protected void Button_minus_Click(object sender, EventArgs e)
         {
-            if (items_selected-- < 0)
+            if ((total_price -= price) < 0)
             {
-
+                
             }
             else
             {
                 price = Convert.ToDouble(Label_item_price.Text);
 
-                if((total_price -= price) < 0)
+                if(items_selected-- < 0)
                 {
 
                 }
