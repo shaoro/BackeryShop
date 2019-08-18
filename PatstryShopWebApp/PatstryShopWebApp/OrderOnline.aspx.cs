@@ -14,6 +14,7 @@ namespace PatstryShopWebApp
     {
         // global List to track the items added to order
         static List<string> items = new List<string>();
+        static List<double> prices = new List<double>();
         // global total item count and total price variable
         static int items_selected;
         static double total_price;
@@ -24,7 +25,8 @@ namespace PatstryShopWebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Label_display_total_items.Text = items_selected.ToString();
+            Label_display_total_price.Text = total_price.ToString("C", CultureInfo.CurrentCulture);
             conn.ConnectionString = "server=(local); database=Bakery; Integrated Security = SSPI";
             if (!IsPostBack)
             {
@@ -105,6 +107,7 @@ namespace PatstryShopWebApp
 
         protected void Button_cookies_Click(object sender, EventArgs e)
         {
+            Session["ID"] = "1";
             conn.Open();
 
             cmd.Connection = conn;
@@ -148,6 +151,7 @@ namespace PatstryShopWebApp
 
         protected void Button_cupcakes_Click(object sender, EventArgs e)
         {
+            Session["ID"] = "2";
             conn.Open();
 
             cmd.Connection = conn;
@@ -191,6 +195,7 @@ namespace PatstryShopWebApp
 
         protected void Button_cakes_Click(object sender, EventArgs e)
         {
+            Session["ID"] = "3";
             conn.Open();
 
             cmd.Connection = conn;
@@ -272,18 +277,21 @@ namespace PatstryShopWebApp
             Label_display_total_price.Visible = true;
 
             items.Add(Label_item_name.Text.ToString());
+            prices.Add(price);
             
         }
 
         protected void Button_minus_Click(object sender, EventArgs e)
         {
+
+            
             if ((total_price -= price) < 0)
             {
                 
             }
             else
             {
-                price = Convert.ToDouble(Label_item_price.Text);
+                price = Convert.ToDouble(Label_item_price.Text.TrimStart('$'));
 
                 if(items_selected-- < 0)
                 {
@@ -295,6 +303,9 @@ namespace PatstryShopWebApp
                     total_price -= price;
                     Label_display_total_items.Text = items_selected.ToString();
                     Label_display_total_price.Text = total_price.ToString("C", CultureInfo.CurrentCulture);
+
+                    items.Remove(Label_item_name.Text.ToString());
+                    prices.Remove(price);
                 }
                 
             }
@@ -306,8 +317,31 @@ namespace PatstryShopWebApp
             Session["TOTAL_PRICE"] = Label_display_total_price.Text.ToString();
             Session["TOTAL_ITEMS"] = Label_display_total_items.Text.ToString();
             Session["LIST"] = items;
+            Session["PRICES"] = prices;
 
             Server.Transfer("Checkout.aspx");
+        }
+
+        protected void Button_reset_Click(object sender, EventArgs e)
+        {
+            items_selected = 0;
+            total_price = 0;
+            items.Clear();
+            prices.Clear();
+            Label_display_total_items.Text = items_selected.ToString();
+            Label_display_total_price.Text = total_price.ToString("C", CultureInfo.CurrentCulture);
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*
+             Image_item_display.ImageUrl = "";
+            Label_item_name.Text = Button1.Text;
+            Label_item_desc.Text = Label_1_desc.Text;
+            price = Convert.ToDouble(Label_1_price.Text.TrimStart('$'));
+            Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+             */
+            Label_item_name.Text = GridView1.SelectedRow.ToString();
         }
     }
 }

@@ -49,15 +49,6 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Label_1_desc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_1_desc;
-        
-        /// <summary>
         /// Label_1_price control.
         /// </summary>
         /// <remarks>
@@ -65,6 +56,15 @@ namespace PatstryShopWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_1_price;
+        
+        /// <summary>
+        /// Label_1_desc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_1_desc;
         
         /// <summary>
         /// Button2 control.
@@ -76,15 +76,6 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// Label_2_desc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_2_desc;
-        
-        /// <summary>
         /// Label_2_price control.
         /// </summary>
         /// <remarks>
@@ -92,6 +83,15 @@ namespace PatstryShopWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_2_price;
+        
+        /// <summary>
+        /// Label_2_desc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_2_desc;
         
         /// <summary>
         /// Button3 control.
@@ -103,6 +103,15 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
+        /// Label_3_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_3_price;
+        
+        /// <summary>
         /// Label_3_desc control.
         /// </summary>
         /// <remarks>
@@ -112,13 +121,22 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.Label Label_3_desc;
         
         /// <summary>
-        /// Label_3_price control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_3_price;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// Image_item_display control.
@@ -218,5 +236,14 @@ namespace PatstryShopWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_to_checkout;
+        
+        /// <summary>
+        /// Button_reset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_reset;
     }
 }

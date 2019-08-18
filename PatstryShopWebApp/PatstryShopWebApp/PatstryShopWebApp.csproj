@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Admin.aspx" />
     <Content Include="Checkout.aspx" />
+    <Content Include="FinalPayment.aspx" />
     <Content Include="image\background2.jpeg" />
     <Content Include="image\Cakes\chocmousse.jpg" />
     <Content Include="image\Cupcakes\CakePops.jpg" />
@@ -95,7 +96,6 @@
     <Content Include="image\logo.PNG" />
     <Content Include="image\Side.png" />
     <Content Include="OrderOnline.aspx" />
-    <Content Include="PaymentPage.aspx" />
     <Content Include="Web.config" />
     <Content Include="Menu.aspx" />
     <Content Include="Login.aspx" />
@@ -116,6 +116,13 @@
     <Compile Include="Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FinalPayment.aspx.cs">
+      <DependentUpon>FinalPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinalPayment.aspx.designer.cs">
+      <DependentUpon>FinalPayment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.Master.cs">
       <DependentUpon>MainPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,13 +136,6 @@
     </Compile>
     <Compile Include="OrderOnline.aspx.designer.cs">
       <DependentUpon>OrderOnline.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PaymentPage.aspx.cs">
-      <DependentUpon>PaymentPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PaymentPage.aspx.designer.cs">
-      <DependentUpon>PaymentPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />

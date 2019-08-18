@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="PaymentPage.aspx.cs" Inherits="PatstryShopWebApp.Checkout" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="FinalPayment.aspx.cs" Inherits="PatstryShopWebApp.FinalPayment" %>
+
 <asp:Content ID="ContentArea" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
         #PaymentBody {
@@ -36,14 +37,14 @@
     <br />
 
 
-    <table cellpadding="2" class="auto-style10">
+    <table cellpadding="2" align="center" class="auto-style10">
         <tr>
             <td>
-                <asp:Label ID="Label_final_price" runat="server" Text="Total"></asp:Label>
+                <asp:Label ID="Label7" runat="server" Text="Total"></asp:Label>
             </td>
             <td>&nbsp;</td>
             <td class="auto-style11">
-                <asp:Label ID="Label_ttl_price" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label_price_final" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -67,6 +68,9 @@
     </table>
 
 
-    <asp:Button ID="Button_submit_pay" runat="server" Text="Process Payment" />
+        <br />
+        <asp:Button ID="Button_process_payment" runat="server" Text="Process Payment" OnClick="Button_process_payment_Click" />
+
+
         </div>
     </asp:Content>

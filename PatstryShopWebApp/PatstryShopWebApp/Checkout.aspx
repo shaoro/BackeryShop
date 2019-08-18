@@ -80,7 +80,7 @@
 
 
 
-    <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" PostBackUrl="~/PaymentPage.aspx" />
+    <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" />
 
 
 </asp:Content>

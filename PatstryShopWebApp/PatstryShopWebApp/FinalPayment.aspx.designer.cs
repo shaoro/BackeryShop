@@ -10,7 +10,7 @@
 namespace PatstryShopWebApp {
     
     
-    public partial class Checkout {
+    public partial class FinalPayment {
         
         /// <summary>
         /// Label6 control.
@@ -40,22 +40,22 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
         
         /// <summary>
-        /// Label_final_price control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_final_price;
+        protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// Label_ttl_price control.
+        /// Label_price_final control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_ttl_price;
+        protected global::System.Web.UI.WebControls.Label Label_price_final;
         
         /// <summary>
         /// TextBox1 control.
@@ -94,12 +94,12 @@ namespace PatstryShopWebApp {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// Button_submit_pay control.
+        /// Button_process_payment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_submit_pay;
+        protected global::System.Web.UI.WebControls.Button Button_process_payment;
     }
 }
