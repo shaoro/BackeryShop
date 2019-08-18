@@ -267,7 +267,9 @@ namespace PatstryShopWebApp
             total_price += price;
             
             Label_display_total_items.Text = items_selected.ToString();
+            Label_display_total_items.Visible = true;
             Label_display_total_price.Text = total_price.ToString("C", CultureInfo.CurrentCulture);
+            Label_display_total_price.Visible = true;
 
             items.Add(Label_item_name.Text.ToString());
             

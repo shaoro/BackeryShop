@@ -1,6 +1,11 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="PatstryShopWebApp.Checkout" %>
 <asp:Content ID="ContentArea" ContentPlaceHolderID="MainContent" runat="server">
-
+    <style type="text/css">
+        #CheckoutBody {
+            background-color:antiquewhite;
+        }
+    </style>
+    <div id="CheckoutBody">
     <table cellpadding="2" class="auto-style1">
         <tr>
             <td class="auto-style3">
@@ -75,12 +80,13 @@
 
 
 
-    <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" PostBackUrl="~/Payment.aspx" />
+    <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" PostBackUrl="~/PaymentPage.aspx" />
 
 
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
+
         .auto-style1 {
             width: 27%;
             border-collapse: collapse;
@@ -97,5 +103,6 @@
             width: 68px;
         }
     </style>
+    </div>
 </asp:Content>
 

@@ -1,8 +1,37 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="OrderOnline.aspx.cs" Inherits="PatstryShopWebApp.OrderOnline" %>
 <asp:Content ID="ContentArea" ContentPlaceHolderID="MainContent" runat="server">
-
-
-    <asp:Button ID="Button_cookies" OnClick="Button_cookies_Click" runat="server" Text="Cookies" />
+    <style type="text/css">
+        #OrderOnlineBody{
+            background-color:antiquewhite;
+        }
+        .auto-style10 {
+            width: 219px;
+            border: 2px solid #000000;
+            margin-left: 586px;
+        }
+        .auto-style11 {
+            width: 43px;
+        }
+        .auto-style12 {
+            width: 47px;
+        }
+        .auto-style14 {
+            width: 145px;
+        }
+        .auto-style15 {
+            width: 101px;
+        }
+        .auto-style16 {
+            width: 1372px;
+            border: 2px solid #000000;
+            height: 149px;
+        }
+        .auto-style17 {
+            width: 56px;
+        }
+    </style>
+    <div id="OrderOnlineBody">    
+        <asp:Button ID="Button_cookies" OnClick="Button_cookies_Click" runat="server" Text="Cookies" />
 
 
     <asp:Button ID="Button_cupcakes" OnClick="Button_cupcakes_Click" runat="server" Text="Cupcakes" />
@@ -68,7 +97,7 @@
                 <asp:Label ID="Label_total_items" runat="server" Text="# of Items:"></asp:Label>
             </td>
             <td class="auto-style15">
-                <asp:Label ID="Label_display_total_items" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label_display_total_items" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -78,7 +107,7 @@
                 <asp:Label ID="Label5" runat="server" Text="Total Price:"></asp:Label>
             </td>
             <td class="auto-style15">
-                <asp:Label ID="Label_display_total_price" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label_display_total_price" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -97,33 +126,8 @@
     
     <br />
 
-   
-    <style type="text/css">
-        .auto-style10 {
-            width: 219px;
-            border: 2px solid #000000;
-            margin-left: 586px;
-        }
-        .auto-style11 {
-            width: 43px;
-        }
-        .auto-style12 {
-            width: 47px;
-        }
-        .auto-style14 {
-            width: 145px;
-        }
-        .auto-style15 {
-            width: 101px;
-        }
-        .auto-style16 {
-            width: 1372px;
-            border: 2px solid #000000;
-            height: 149px;
-        }
-        .auto-style17 {
-            width: 56px;
-        }
-    </style>
+   </div>
+
+    
     </asp:Content>
 

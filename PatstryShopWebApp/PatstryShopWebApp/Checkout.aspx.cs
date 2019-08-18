@@ -68,7 +68,7 @@ namespace PatstryShopWebApp
         protected void Button_to_payment_Click(object sender, EventArgs e)
         {
             Session["ttl_price"] = Label_total_price.Text;
-            Server.Transfer("Payment.aspx");
+            Server.Transfer("PaymentPage.aspx");
         }
 
         

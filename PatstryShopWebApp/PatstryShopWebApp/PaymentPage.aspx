@@ -1,6 +1,11 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="PaymentPage.aspx.cs" Inherits="PatstryShopWebApp.Checkout" %>
 <asp:Content ID="ContentArea" ContentPlaceHolderID="MainContent" runat="server">
-
+    <style type="text/css">
+        #PaymentBody {
+            background-color:antiquewhite;
+        }
+    </style>
+    <div id="PaymentBody">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="Label6" runat="server" Text="Please Select Your Pickup Time"></asp:Label>
     <br />
@@ -63,5 +68,5 @@
 
 
     <asp:Button ID="Button_submit_pay" runat="server" Text="Process Payment" />
-
+        </div>
     </asp:Content>
