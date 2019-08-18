@@ -44,7 +44,7 @@
 </asp:Content>
 
 <asp:Content ID="Login" ContentPlaceHolderID="MainContent" runat="server">
-   <div id="loginBody">
+    <div id="loginBody">
        <div>
            <img src="image/Side.png" id="sideimg" />
        </div>
@@ -55,25 +55,23 @@
            <br />
            <table id="loginTable">
                <tr>
-                   <td colspan="2" style="background-color:orangered;">
-                       <h1 style="color:white;">Login</h1>
+                   <td colspan="2">
+                       <h1 style="color:white; background-color:orangered;">Login</h1>
                    </td>
                </tr>
                <tr>
-                   <td colspan="2"></td>
-
-               </tr>
-               <tr>
                    <td>UserName:</td>
-                   <td>
+                   <td class="auto-style1">
                        <asp:TextBox ID="tbUser" runat="server" Width="208px"></asp:TextBox>
                    </td>
                </tr>
                <tr class="sideLink">
-                    <td colspan="2"><a>Forgot Your Password?</a></td>
+                    <td colspan="2">
+                         <asp:LinkButton ID="forgotPass" runat="server" Font-Size="Small" OnClick="forgotPass_Click">Forgot your password?</asp:LinkButton>
+                    </td>
                </tr>
                <tr>
-                   <td>Password</td>
+                   <td>Password:</td>
                    <td>
                        <asp:TextBox ID="tbPass" runat="server" Width="210px"></asp:TextBox>
                    </td>
@@ -86,7 +84,9 @@
                    </td>
                </tr>
                <tr class="sideLink">
-                   <td colspan="2"><a>Don't Have an account? SIGN UP</a></td>
+                   <td colspan="2">
+                       <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="False" Font-Size="Small" OnClick="LinkButton1_Click">Don&#39;t Have an account? SIGN UP</asp:LinkButton>
+                   </td>
                </tr>
            </table>
            <br />
