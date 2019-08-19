@@ -17,6 +17,7 @@ namespace PatstryShopWebApp
             try { 
             if(Session["LIST"] != null)
             {
+                    /*
                     List<double> displayPrices = (List<double>)Session["PRICES"];
                     for(int i = 0; i < displayPrices.Count; i++)
                     {
@@ -86,9 +87,10 @@ namespace PatstryShopWebApp
                         Label_item_6.Visible = true;
                     }
                 }
-            }
+                */
+                }
 
-            if(Session["TOTAL_PRICE"] != null)
+                if (Session["TOTAL_PRICE"] != null)
             {
                 Label_total_price.Text = Session["TOTAL_PRICE"].ToString();
             }

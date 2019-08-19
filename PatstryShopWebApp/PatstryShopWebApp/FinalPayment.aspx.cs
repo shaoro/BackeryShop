@@ -67,18 +67,19 @@ namespace PatstryShopWebApp
                 conn.Open();
                 cmd.Connection = conn;
                 cmd.CommandText = "INSERT INTO orderH(totalCost, purchaseDate, userId) values(@price, @date, @user);";
-                cmd.Parameters.AddWithValue("@date", System.DateTime.Now);
+
+                
                 cmd.Parameters.AddWithValue("@price", Label_price_final.Text.TrimStart('$'));
+                cmd.Parameters.AddWithValue("@date", System.DateTime.Now);
                 cmd.Parameters.AddWithValue("@user", userId);
                     
 
 
                 cmd.ExecuteNonQuery();
-                Response.Write("orderH  Success ");
-
+                
                 cmd.CommandText = "DELETE FROM buildOrder;";
                 cmd.ExecuteNonQuery();
-                Response.Write("buildOrder ***** Success ");
+                
                 conn.Close();
                     Label_order_complete.Visible = true;
                     Button_return.Visible = true;
