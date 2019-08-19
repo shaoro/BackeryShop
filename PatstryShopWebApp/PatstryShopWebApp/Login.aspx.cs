@@ -59,6 +59,7 @@ namespace PatstryShopWebApp
 
                                 rd.Close();
 
+
                                 Response.Redirect("Menu.aspx");
 
                             }
@@ -66,8 +67,6 @@ namespace PatstryShopWebApp
                             {
                                 lbError.Text = "Password Incorrect!";
                             }
-
-
                         }
                         else
                         {

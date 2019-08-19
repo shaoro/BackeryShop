@@ -91,10 +91,13 @@
             <li><a>Home</a></li>
             <li><a href="Menu.aspx">Menu</a></li>
             <li><a href="OrderOnline.aspx">Order Online</a></li>
-            <li><a h>Contact</a></li>
-            <li id="login"><a href="Login.aspx">
-                <asp:Label ID="Label1" runat="server" Text="Login"></asp:Label>
-                </a></li>
+            <li><a href="Contact.aspx">Contact</a></li>
+            <li>
+                <asp:HyperLink ID="hyperUser" runat="server" Visible="False">[hyperUser]</asp:HyperLink>
+            </li>
+            <li id="login">
+                <asp:HyperLink ID="hyperLog" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink> 
+            </li>
         </ul>
     </header>
     <br />
@@ -120,7 +123,7 @@
          <div class="footer">
             <h1>Contact</h1>
             <p>905-845-9430</p>
-            <p>info@jsbakery.com</p>
+            <p>jsbakeryoakville@gmail.com</p>
         </div>
     </footer>
     </form>

@@ -97,11 +97,15 @@
     <Content Include="image\Cookies\WhiteChocolateMacadamia.jpg" />
     <Content Include="image\logo.PNG" />
     <Content Include="image\Side.png" />
+    <Content Include="image\side2.PNG" />
+    <Content Include="image\side3.PNG" />
     <Content Include="OrderOnline.aspx" />
     <Content Include="Web.config" />
     <Content Include="Menu.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="WebForm3.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Contact.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.aspx.cs">
@@ -176,6 +180,20 @@
     </Compile>
     <Compile Include="WebForm3.aspx.designer.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

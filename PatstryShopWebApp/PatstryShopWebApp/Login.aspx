@@ -24,6 +24,7 @@
          width: 350px;
          display: inline-block;
          border: 1px inset silver;
+         font-size: 30px;
      }
 
      #loginTable td {
@@ -35,11 +36,25 @@
          width: 400px;
      }
 
-        .sideLink {
+    #header {
+            text-align:center;
+            font-size: 45px;
+            background-color: saddlebrown;
+            color: white;
+    }
+
+    .button {
+            background-color: sandybrown;
+            font-size: 30px;
+            color: white;
+            margin-right: 25px;
+     }
+
+    .sideLink {
             font-size: 14px;
             color: blue;
             text-align: right;
-        }
+    }
   </style>
 </asp:Content>
 
@@ -55,14 +70,12 @@
            <br />
            <table id="loginTable">
                <tr>
-                   <td colspan="2">
-                       <h1 style="color:white; background-color:orangered;">Login</h1>
-                   </td>
+                   <th colspan="2" id="header">Login</th>
                </tr>
                <tr>
                    <td>UserName:</td>
                    <td class="auto-style1">
-                       <asp:TextBox ID="tbUser" runat="server" Width="208px"></asp:TextBox>
+                       <asp:TextBox ID="tbUser" runat="server" Width="210px" BorderStyle="None" Height="30px"></asp:TextBox>
                    </td>
                </tr>
                <tr class="sideLink">
@@ -73,13 +86,13 @@
                <tr>
                    <td>Password:</td>
                    <td>
-                       <asp:TextBox ID="tbPass" runat="server" Width="210px"></asp:TextBox>
+                       <asp:TextBox ID="tbPass" runat="server" Width="210px" BorderStyle="None" Height="30px" TextMode="Password"></asp:TextBox>
                    </td>
                </tr>
                <tr>
                    <td colspan="2">
                        <br />
-                       <asp:Button ID="submit" runat="server" Text="Submit" Width="201px" BackColor="Black" Font-Bold="True" ForeColor="White" Height="53px" OnClick="submit_Click" />
+                       <asp:Button ID="submit" class="button" runat="server" Text="Submit" OnClick="submit_Click" />
                        <br />
                    </td>
                </tr>

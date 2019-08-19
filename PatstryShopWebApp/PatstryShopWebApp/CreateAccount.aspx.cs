@@ -41,8 +41,6 @@ namespace PatstryShopWebApp
                     "alert('Create Account Successully');" +
                     "window.close();" +
                     "</script>");
-             
-
             }
 
         }
@@ -123,6 +121,7 @@ namespace PatstryShopWebApp
                 }
                 catch (SqlException ex)
                 {
+                    lblError.Text = ex.Message;
                     return -1;
                 }
             }

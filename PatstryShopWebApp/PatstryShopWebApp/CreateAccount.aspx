@@ -69,13 +69,13 @@
 
                 <tr>
                     <td>Password:</td>
-                    <td><asp:TextBox ID="tbPass" runat="server" Width="236px"></asp:TextBox>
+                    <td><asp:TextBox ID="tbPass" runat="server" Width="236px" TextMode="Password"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="vPass" runat="server" ControlToValidate="tbPass" ErrorMessage="Password Cannot Be Empty!" Font-Size="Medium" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td>Confirm Password:</td>
-                    <td><asp:TextBox ID="tbConfirm" runat="server" Width="236px"></asp:TextBox>
+                    <td><asp:TextBox ID="tbConfirm" runat="server" Width="236px" TextMode="Password"></asp:TextBox>
                         <asp:CompareValidator ID="cConfirm" runat="server" ControlToCompare="tbPass" ControlToValidate="tbConfirm" ErrorMessage=" Password Does Not Match!  " Font-Size="Medium" ForeColor="Red"></asp:CompareValidator></td>
                 </tr>
 
