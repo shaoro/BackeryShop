@@ -55,13 +55,19 @@ namespace PatstryShopWebApp
                             {
                                 User newUser = new User(Convert.ToInt32(rd[0].ToString()), rd[1].ToString(), rd[2].ToString(), rd[3].ToString(),
                                     rd[4].ToString(), rd[5].ToString(), rd[6].ToString(), Convert.ToInt32(rd[7].ToString()));
+
                                 Session["user"] = newUser;
 
                                 rd.Close();
 
-
-                                Response.Redirect("Menu.aspx");
-
+                                if(newUser.UserName == "admin")
+                                {
+                                    Response.Redirect("Admin.aspx");
+                                }
+                                else
+                                {
+                                    Response.Redirect("Menu.aspx");
+                                }
                             }
                             else
                             {

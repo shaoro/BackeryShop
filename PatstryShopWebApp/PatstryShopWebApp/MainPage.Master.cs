@@ -15,12 +15,29 @@ namespace PatstryShopWebApp
             {
                 hyperLog.Text = "Logout";
                 hyperLog.NavigateUrl = "Logout.aspx";
+
+                var newUser = (User)Session["user"];
+
+                hyperUser.Visible = true;
+
+                if(newUser.UserName == "admin")
+                {
+                    hyperUser.Text = "Admin";
+                    hyperUser.NavigateUrl = "Admin.aspx";
+                }
+                else
+                {
+                    hyperUser.Text = "Welcome " + newUser.FirstName;
+                    hyperUser.NavigateUrl = "User.aspx";
+                }
             }
             else
             {
                 hyperLog.Text = "Login";
                 hyperLog.NavigateUrl = "Login.aspx";
             }
+
+            
         }
     }
 }

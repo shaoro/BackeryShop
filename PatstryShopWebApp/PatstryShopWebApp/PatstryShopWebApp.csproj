@@ -103,7 +103,7 @@
     <Content Include="Web.config" />
     <Content Include="Menu.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="WebForm3.aspx" />
+    <Content Include="User.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Contact.aspx" />
   </ItemGroup>
@@ -174,12 +174,12 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>

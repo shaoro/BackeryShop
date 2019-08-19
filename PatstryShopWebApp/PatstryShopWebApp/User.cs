@@ -30,41 +30,49 @@ namespace PatstryShopWebApp
 
         public int ID {
             get { return id; }
+            set { }
         }
 
         public string FirstName
         {
             get { return firstName; }
+            set { }
         }
 
         public string LastName
         {
             get { return lastName; }
+            set { }
         }
 
         public string Email
         {
             get { return email; }
+            set { }
         }
 
         public string UserName
         {
             get { return userName; }
+            set { }
         }
 
         public string Password
         {
             get { return password; }
+            set { }
         }
 
         public string PhoneNum
         {
             get { return phoneNumber; }
+            set { }
         }
 
         public int AddressID
         {
             get { return addressId; }
+            set { }
         }
     }
 }
