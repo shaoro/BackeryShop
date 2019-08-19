@@ -83,12 +83,27 @@
 
 
                     <br />
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource1" Width="100%" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource1" Width="100%" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Height="300px" DataKeyNames="description,imageUrl">
                         <Columns>
                             <asp:CommandField ShowSelectButton="True" />
                             <asp:BoundField DataField="name" SortExpression="name" />
-                            <asp:BoundField DataField="description" SortExpression="description" />
+                            <asp:TemplateField SortExpression="description" Visible="False">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("description") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label_temp_desc" runat="server" Text='<%# Eval("description") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                             <asp:BoundField DataField="price" DataFormatString="{0:C}" SortExpression="price" />
+                            <asp:TemplateField SortExpression="imageUrl" Visible="False">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("imageUrl") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label_temp_img" runat="server" Text='<%# Eval("imageUrl") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                         <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                         <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -100,7 +115,7 @@
                         <SortedDescendingCellStyle BackColor="#F1E5CE" />
                         <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BakeryConnectionString %>" SelectCommand="SELECT [name], [description], [price] FROM [Pastry] WHERE ([categoryId] = @categoryId)">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BakeryConnectionString %>" SelectCommand="SELECT [name], [description], [price], [imageUrl] FROM [Pastry] WHERE ([categoryId] = @categoryId)">
                         <SelectParameters>
                             <asp:SessionParameter DefaultValue="1" Name="categoryId" SessionField="ID" Type="Int32" />
                         </SelectParameters>
@@ -109,7 +124,7 @@
                 <td class="auto-style20">
 
 
-    <asp:Image ID="Image_item_display" runat="server" />
+    <asp:Image ID="Image_item_display" runat="server" Height="222px" Width="237px" />
                     <br />
     <asp:Label ID="Label_item_name" runat="server" Text="Label"></asp:Label>
                     <br />

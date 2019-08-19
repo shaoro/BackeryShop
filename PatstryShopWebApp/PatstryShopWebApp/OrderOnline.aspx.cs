@@ -42,7 +42,7 @@ namespace PatstryShopWebApp
                     string pastryName = reader[1].ToString();
                     string pastryDesc = reader[2].ToString();
                     string pastryPrice = reader[3].ToString();
-
+                    string pastryImage = reader[5].ToString();
                     if (count == 1)
                     {
 
@@ -54,6 +54,7 @@ namespace PatstryShopWebApp
                             Label_item_name.Text = pastryName;
                             Label_item_desc.Text = pastryDesc;
                             Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                            Image_item_display.ImageUrl = "image/"+pastryImage;
 
                         }
                     /* 
@@ -409,10 +410,21 @@ namespace PatstryShopWebApp
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Label Label_temp_desc = null;
+            Label Label_temp_img = null;
             
             Label_item_name.Text = GridView1.SelectedRow.Cells[1].Text;
+
+            Label_temp_desc = (Label)GridView1.SelectedRow.FindControl("Label_temp_desc");
+            Label_item_desc.Text = Label_temp_desc.Text;
+
             price = Convert.ToDouble(GridView1.SelectedRow.Cells[3].Text.TrimStart('$'));
             Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+
+            Label_temp_img = (Label)GridView1.SelectedRow.FindControl("Label_temp_img");
+            Image_item_display.ImageUrl = "image/" + Label_temp_img.Text; ;
+
+            
         }
     }
 }
