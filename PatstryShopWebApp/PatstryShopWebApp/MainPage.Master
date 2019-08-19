@@ -88,8 +88,7 @@
         <br />
         <br />
         <ul>
-            <li><a>Home</a></li>
-            <li><a href="Menu.aspx">Menu</a></li>
+            <li><a href="main.aspx">Home</a></li>
             <li><a href="OrderOnline.aspx">Order Online</a></li>
             <li><a href="Contact.aspx">Contact</a></li>
             <li>
