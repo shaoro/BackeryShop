@@ -13,19 +13,19 @@ namespace PatstryShopWebApp
         {
             if(Session["user"] == null)
             {
-                Response.Redirect("Menu.aspx");
+                Response.Redirect("Login.aspx");
             }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session["user"] = null;
-            Response.Redirect("Menu.aspx");
+            Response.Redirect("Login.aspx");
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Menu.aspx");
+            Response.Redirect("Login.aspx");
         }
     }
 }

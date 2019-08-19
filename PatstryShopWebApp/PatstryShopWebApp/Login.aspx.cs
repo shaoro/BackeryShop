@@ -66,7 +66,7 @@ namespace PatstryShopWebApp
                                 }
                                 else
                                 {
-                                    Response.Redirect("Menu.aspx");
+                                    Response.Redirect("Login.aspx");
                                 }
                             }
                             else
