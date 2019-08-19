@@ -12,10 +12,23 @@ namespace PatstryShopWebApp
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
-
+        int userId;
         List<string> OrderItems; 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["user"] != null)
+            {
+                User u = (User)Session["user"];
+                userId = u.ID;
+            }
+            else
+            {
+                userId = 99;
+            }
+            
+            Button_process_payment.Enabled = true;
+            Label_order_complete.Visible = false;
+            Button_return.Visible = false;
             conn.ConnectionString = "server=(local); database=Bakery; Integrated Security = SSPI";
             Label_price_final.Text = Session["ttl_price"].ToString();
             OrderItems = (List<string>)Session["LIST"];
@@ -23,14 +36,32 @@ namespace PatstryShopWebApp
 
         protected void Button_process_payment_Click(object sender, EventArgs e)
         {
-            // Insert into Order/Order History:
-                // the list of items:  loop through and add each item
-                // 
-            for(int i = 0; i < OrderItems.Count; i++)
-            {
-                //Response.Write(OrderItems[i]);  this worked to show that we have the List of items
-            }
+            
+             Label_cc_not_valid.Visible = false;
+            Label_expire_not_valid.Visible = false;
+            
 
+            string creditcard = TextBox_cc_num.Text;
+            string expire = TextBox_exp_date.Text;
+            
+            if(creditcard.Length != 16 || expire.Length != 4 )
+            {
+                if(creditcard.Length != 16)
+                {
+                    Label_cc_not_valid.Visible = true;
+                    Label_cc_not_valid.Text = "Invalid Credit Card Number";
+                }
+                if(expire.Length != 4)
+                {
+                    Label_expire_not_valid.Visible = true;
+                    Label_expire_not_valid.Text = "Invalid Expiry Date";
+                }
+                
+            }
+            else
+            {
+                
+            
             try
             {
                 conn.Open();
@@ -38,7 +69,8 @@ namespace PatstryShopWebApp
                 cmd.CommandText = "INSERT INTO orderH(totalCost, purchaseDate, userId) values(@price, @date, @user);";
                 cmd.Parameters.AddWithValue("@date", System.DateTime.Now);
                 cmd.Parameters.AddWithValue("@price", Label_price_final.Text.TrimStart('$'));
-                cmd.Parameters.AddWithValue("@user", 1);
+                cmd.Parameters.AddWithValue("@user", userId);
+                    
 
 
                 cmd.ExecuteNonQuery();
@@ -48,12 +80,22 @@ namespace PatstryShopWebApp
                 cmd.ExecuteNonQuery();
                 Response.Write("buildOrder ***** Success ");
                 conn.Close();
-
+                    Label_order_complete.Visible = true;
+                    Button_return.Visible = true;
+                    Button_process_payment.Enabled = false;
             }
             catch (SqlException ex)
             {
                 Response.Write(" An error occured " + ex.Message);
             }
+            }
+            
+
+        }
+
+        protected void Button_return_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("OrderOnline.aspx");
         }
     }
 }
