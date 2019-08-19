@@ -28,55 +28,60 @@ namespace PatstryShopWebApp
             Label_display_total_items.Text = items_selected.ToString();
             Label_display_total_price.Text = total_price.ToString("C", CultureInfo.CurrentCulture);
             conn.ConnectionString = "server=(local); database=Bakery; Integrated Security = SSPI";
+
             if (!IsPostBack)
             {
-                
+                   
                 conn.Open();
-            cmd.Connection = conn;
-            cmd.CommandText = "Select * from Pastry where categoryId = 1";
-            int count = 1;
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                string pastryName = reader[1].ToString();
-                string pastryDesc = reader[2].ToString();
-                string pastryPrice = reader[3].ToString();
-
-                if (count == 1)
+                cmd.Connection = conn;
+                cmd.CommandText = "Select * from Pastry where categoryId = 1";
+                int count = 1;
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
                 {
-                    Button1.Text = pastryName;
-                    Button1.Visible = true;
-                    Label_1_desc.Text = pastryDesc;
-                        price = Convert.ToDouble(pastryPrice);
-                        Label_1_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
-                        Label_item_name.Text = pastryName;
-                        Label_item_desc.Text = pastryDesc;
-                        Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                    string pastryName = reader[1].ToString();
+                    string pastryDesc = reader[2].ToString();
+                    string pastryPrice = reader[3].ToString();
 
-                    }
-                if (count == 2)
-                {
-                    Button2.Text = pastryName;
-                    Button2.Visible = true;
-                    Label_2_desc.Text = pastryDesc;
-                        price = Convert.ToDouble(pastryPrice);
-                        Label_2_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
-                    }
-                if (count == 3)
-                {
-                    Button3.Text = pastryName;
-                    Button3.Visible = true;
-                    Label_3_desc.Text = pastryDesc;
-                        price = Convert.ToDouble(pastryPrice);
-                        Label_3_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
-                    }
-                count++;
-            }
-            conn.Close();
+                    if (count == 1)
+                    {
 
-            
-                // On first page load:  if logged in as admin
-                if ((string)Session["THREAD"] == "admin")
+                        //Button1.Text = pastryName;
+                        //Button1.Visible = true;
+                        //Label_1_desc.Text = pastryDesc;
+                            price = Convert.ToDouble(pastryPrice);
+                            //Label_1_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                            Label_item_name.Text = pastryName;
+                            Label_item_desc.Text = pastryDesc;
+                            Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+
+                        }
+                    /* 
+                    if (count == 2)
+                    {
+                        Button2.Text = pastryName;
+                        Button2.Visible = true;
+                        Label_2_desc.Text = pastryDesc;
+                            price = Convert.ToDouble(pastryPrice);
+                            Label_2_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                        }
+                    if (count == 3)
+                    {
+                        Button3.Text = pastryName;
+                        Button3.Visible = true;
+                        Label_3_desc.Text = pastryDesc;
+                            price = Convert.ToDouble(pastryPrice);
+                            Label_3_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+                        }
+                    count++;
+                    */
+                }
+                conn.Close();
+
+                    
+
+                    // On first page load:  if logged in as admin
+                    if ((string)Session["THREAD"] == "admin")
                 {
                     
                 }
@@ -108,6 +113,7 @@ namespace PatstryShopWebApp
         protected void Button_cookies_Click(object sender, EventArgs e)
         {
             Session["ID"] = "1";
+            /*
             conn.Open();
 
             cmd.Connection = conn;
@@ -147,11 +153,13 @@ namespace PatstryShopWebApp
                 count++;
             }
             conn.Close();
+            */
         }
 
         protected void Button_cupcakes_Click(object sender, EventArgs e)
         {
             Session["ID"] = "2";
+            /*
             conn.Open();
 
             cmd.Connection = conn;
@@ -191,11 +199,13 @@ namespace PatstryShopWebApp
                 count++;
             }
             conn.Close();
+            */
         }
 
         protected void Button_cakes_Click(object sender, EventArgs e)
         {
             Session["ID"] = "3";
+            /*
             conn.Open();
 
             cmd.Connection = conn;
@@ -236,37 +246,65 @@ namespace PatstryShopWebApp
                 count++;
             }
             conn.Close();
+            */
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            /*
             Image_item_display.ImageUrl = "";
             Label_item_name.Text = Button1.Text;
             Label_item_desc.Text = Label_1_desc.Text;
             price = Convert.ToDouble(Label_1_price.Text.TrimStart('$'));
             Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+            */
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            /*
             Image_item_display.ImageUrl = "";
             Label_item_name.Text = Button2.Text;
             Label_item_desc.Text = Label_2_desc.Text;
             price = Convert.ToDouble(Label_2_price.Text.TrimStart('$'));
             Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+            */
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            /*
             Image_item_display.ImageUrl = "";
             Label_item_name.Text = Button3.Text;
             Label_item_desc.Text = Label_3_desc.Text;
             price = Convert.ToDouble(Label_3_price.Text.TrimStart('$'));
             Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
+            */
         }
 
         protected void Button_add_Click(object sender, EventArgs e)
         {
+            try
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO buildOrder (item, price) values(@item, @price)";
+
+                cmd.Parameters.AddWithValue("@item", Label_item_name.Text);
+                cmd.Parameters.AddWithValue("@price", Label_item_price.Text.TrimStart('$'));
+
+                cmd.ExecuteNonQuery();
+                Label_buildOrder.Text = "Item added";
+                Label_buildOrder.Visible = true;
+
+                conn.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                Response.Write(" An error occured " + ex.Message);
+            }
+            
             items_selected++;
             price = Convert.ToDouble(Label_item_price.Text.TrimStart('$'));
             total_price += price;
@@ -299,6 +337,27 @@ namespace PatstryShopWebApp
                 }
                 else
                 {
+                    try
+                    {
+                        conn.Open();
+                        cmd.Connection = conn;
+                        cmd.CommandText = "DELETE FROM buildOrder where ID=(SELECT MAX(id) FROM buildOrder) AND item='@item';";
+
+                        cmd.Parameters.AddWithValue("@item", Label_item_name.Text);
+                        cmd.Parameters.AddWithValue("@price", Label_item_price.Text.TrimStart('$'));
+
+                        cmd.ExecuteNonQuery();
+                        Label_buildOrder.Text = "Item removed";
+                        Label_buildOrder.Visible = true;
+                        
+                        conn.Close();
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        Response.Write(" An error occured " + ex.Message);
+                    }
+
                     items_selected--;
                     total_price -= price;
                     Label_display_total_items.Text = items_selected.ToString();
@@ -330,18 +389,30 @@ namespace PatstryShopWebApp
             prices.Clear();
             Label_display_total_items.Text = items_selected.ToString();
             Label_display_total_price.Text = total_price.ToString("C", CultureInfo.CurrentCulture);
+            try
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = "DELETE FROM buildOrder;";
+
+                cmd.ExecuteNonQuery();
+                Label_buildOrder.Text = "Order reset";
+                Label_buildOrder.Visible = true;
+                conn.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                Response.Write(" An error occured " + ex.Message);
+            }
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*
-             Image_item_display.ImageUrl = "";
-            Label_item_name.Text = Button1.Text;
-            Label_item_desc.Text = Label_1_desc.Text;
-            price = Convert.ToDouble(Label_1_price.Text.TrimStart('$'));
+            
+            Label_item_name.Text = GridView1.SelectedRow.Cells[1].Text;
+            price = Convert.ToDouble(GridView1.SelectedRow.Cells[3].Text.TrimStart('$'));
             Label_item_price.Text = price.ToString("C", CultureInfo.CurrentCulture);
-             */
-            Label_item_name.Text = GridView1.SelectedRow.ToString();
         }
     }
 }
