@@ -21,7 +21,7 @@ namespace PatstryShopWebApp
             using (SqlConnection conn = new SqlConnection())
             {
                 conn.ConnectionString = "server=(local); " +
-                    "database=Bakery; Integrated Security=SSPI;";
+                  "database=Bakery; Integrated Security=SSPI;";
                 try
                 {
                     using (SqlCommand cmd = new SqlCommand())
@@ -53,11 +53,12 @@ namespace PatstryShopWebApp
 
                             if (password == tbPass.Text)
                             {
-                                User newUser = new User(Convert.ToInt32(rd[0]), rd[1].ToString(), rd[2].ToString(), rd[3].ToString(),
-                                    rd[4].ToString(), rd[5].ToString(), rd[6].ToString(), Convert.ToInt32(rd[7]));
+                                User newUser = new User(Convert.ToInt32(rd[0].ToString()), rd[1].ToString(), rd[2].ToString(), rd[3].ToString(),
+                                    rd[4].ToString(), rd[5].ToString(), rd[6].ToString(), Convert.ToInt32(rd[7].ToString()));
                                 Session["user"] = newUser;
 
                                 rd.Close();
+
 
                                 Response.Redirect("Menu.aspx");
 
@@ -66,8 +67,6 @@ namespace PatstryShopWebApp
                             {
                                 lbError.Text = "Password Incorrect!";
                             }
-
-
                         }
                         else
                         {
@@ -81,6 +80,29 @@ namespace PatstryShopWebApp
                     lbError.Text = "An Error Occured " + ex.Message;
                 }
             }
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+
+            string url = "CreateAccount.aspx";
+
+            Session["create"] = "create";
+
+            string s = "window.open('" + url + "', 'popup_window', 'width=500,height=500,left=300,top=100,resizable=yes');";
+
+            ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+        }
+
+        protected void forgotPass_Click(object sender, EventArgs e)
+        {
+            string url = "ForgotPassword.aspx";
+
+            Session["forgot"] = "forgot";
+
+            string s = "window.open('" + url + "', 'popup_window', 'width=500,height=500,left=300,top=100,resizable=yes');";
+
+            ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
         }
     }
 }

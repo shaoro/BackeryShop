@@ -10,60 +10,60 @@
 namespace PatstryShopWebApp {
     
     
-    public partial class WebForm2 {
+    public partial class WebForm5 {
         
         /// <summary>
-        /// lbError control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbError;
+        protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// tbUser control.
+        /// tbName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbUser;
+        protected global::System.Web.UI.WebControls.TextBox tbName;
         
         /// <summary>
-        /// forgotPass control.
+        /// tbEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton forgotPass;
+        protected global::System.Web.UI.WebControls.TextBox tbEmail;
         
         /// <summary>
-        /// tbPass control.
+        /// tbSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPass;
+        protected global::System.Web.UI.WebControls.TextBox tbSubject;
         
         /// <summary>
-        /// submit control.
+        /// tbMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.TextBox tbMessage;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// btnSend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Button btnSend;
     }
 }

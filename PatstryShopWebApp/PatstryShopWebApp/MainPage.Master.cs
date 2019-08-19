@@ -11,7 +11,16 @@ namespace PatstryShopWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["user"] != null)
+            {
+                hyperLog.Text = "Logout";
+                hyperLog.NavigateUrl = "Logout.aspx";
+            }
+            else
+            {
+                hyperLog.Text = "Login";
+                hyperLog.NavigateUrl = "Login.aspx";
+            }
         }
     }
 }
