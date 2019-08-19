@@ -150,23 +150,23 @@
     <table cellpadding="2" class="auto-style16" style="height: 100%; width: 100%; border-color: #D2691E">
         <tr>
             <td class="auto-style24">
-                <asp:Label ID="Label_total_items" runat="server" Text="# of Items:"></asp:Label>
+                <asp:Label ID="Label_total_items" runat="server" Text="# of Items:" Font-Size="Large" ForeColor="#CC6600"></asp:Label>
             </td>
             <td class="auto-style23">
-                <asp:Label ID="Label_display_total_items" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label_display_total_items" runat="server" Text="Label" Font-Size="Large" ForeColor="#CC6600"></asp:Label>
             </td>
         </tr>
         <tr>
             <td class="auto-style24">
-                <asp:Label ID="Label5" runat="server" Text="Total Price:"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Total Price:" Font-Size="Medium" ForeColor="#CC6600"></asp:Label>
             </td>
             <td class="auto-style23">
-                <asp:Label ID="Label_display_total_price" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label_display_total_price" runat="server" Text="Label" Font-Size="Large" ForeColor="#CC6600"></asp:Label>
             </td>
         </tr>
         <tr>
             <td class="auto-style24">
-                <asp:Label ID="Label_buildOrder" runat="server" Text="Label" Visible="False"></asp:Label>
+                <asp:Label ID="Label_buildOrder" runat="server" Text="Label" Visible="False" Font-Italic="True" Font-Size="Medium" ForeColor="#CC6600"></asp:Label>
             </td>
             <td class="auto-style23">&nbsp;</td>
         </tr>

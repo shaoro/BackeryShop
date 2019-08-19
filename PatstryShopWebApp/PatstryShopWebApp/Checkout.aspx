@@ -13,115 +13,48 @@
         .auto-style6 {
             width: 976px;
         }
-        .auto-style7 {
-            width: 266px;
-            height: 26px;
-        }
-        .auto-style8 {
-            width: 68px;
-            height: 26px;
-        }
-        .auto-style9 {
-            width: 170px;
-            height: 26px;
-        }
         .auto-style10 {
             width: 1406px;
+        }
+        .auto-style11 {
+            width: 1030px;
+        }
+        .auto-style12 {
+            margin-left: 85px;
         }
     </style>
     <div id="CheckoutBody">
     &nbsp;
         <table cellpadding="2" class="auto-style5">
             <tr>
-                <td>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="541px">
-                        <Columns>
-                            <asp:BoundField DataField="item" HeaderText="item" SortExpression="item" />
-                            <asp:BoundField DataField="price" DataFormatString="{0:C}" HeaderText="price" SortExpression="price" />
-                        </Columns>
-                    </asp:GridView>
+                <td class="auto-style11">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BakeryConnectionString %>" SelectCommand="SELECT * FROM [buildOrder]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style6">
                     <br />
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="541px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" CssClass="auto-style12">
+                        <Columns>
+                            <asp:BoundField DataField="item" HeaderText="item" SortExpression="item" />
+                            <asp:BoundField DataField="price" DataFormatString="{0:C}" HeaderText="price" SortExpression="price" />
+                        </Columns>
+                        <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                        <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                        <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                        <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                        <SortedDescendingHeaderStyle BackColor="#93451F" />
+                    </asp:GridView>
                 </td>
                 <td class="auto-style10">
-    <table cellpadding="2" class="auto-style1" style="clear: left">
-        <tr>
-            <td class="auto-style3">
-                <asp:Label ID="Label_item_1" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style4">
-                <asp:Label ID="Label_qty_1" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style2">
-                <asp:Label ID="Label_pr_1" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">
-                <asp:Label ID="Label_item_2" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style4">
-                <asp:Label ID="Label_qty_2" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style2">
-                <asp:Label ID="Label_pr_2" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">
-                <asp:Label ID="Label_item_3" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style4">
-                <asp:Label ID="Label_qty_3" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style2">
-                <asp:Label ID="Label_pr_3" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style7">
-                <asp:Label ID="Label_item_4" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style8">
-                <asp:Label ID="Label_qty_4" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style9">
-                <asp:Label ID="Label_pr_4" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">
-                <asp:Label ID="Label_item_5" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style4">
-                <asp:Label ID="Label_qty_5" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style2">
-                <asp:Label ID="Label_pr_5" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style7">
-                <asp:Label ID="Label_item_6" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style8">
-                <asp:Label ID="Label_qty_6" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-            <td class="auto-style9">
-                <asp:Label ID="Label_pr_6" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-        </tr>
-    </table>
-
-
-                </td>
+                    &nbsp;</td>
             </tr>
         </table>
 
 
-    <asp:Label ID="Label_total_price" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label_total_price" runat="server" Text="Label" ForeColor="#CC6600"></asp:Label>
         <br />
 
 
@@ -138,24 +71,6 @@
 
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
-    <style type="text/css">
-
-        .auto-style1 {
-            width: 27%;
-            border-collapse: collapse;
-            height: 100%;
-            border: 2px solid #000000;
-        }
-        .auto-style2 {
-            width: 170px;
-        }
-        .auto-style3 {
-            width: 266px;
-        }
-        .auto-style4 {
-            width: 68px;
-        }
-    </style>
     </div>
 </asp:Content>
 
