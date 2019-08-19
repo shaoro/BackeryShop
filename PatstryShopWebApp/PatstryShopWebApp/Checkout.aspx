@@ -4,9 +4,49 @@
         #CheckoutBody {
             background-color:antiquewhite;
         }
+        .auto-style5 {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #D2691E;
+            background-color: #FAEBD7;
+        }
+        .auto-style6 {
+            width: 976px;
+        }
+        .auto-style7 {
+            width: 266px;
+            height: 26px;
+        }
+        .auto-style8 {
+            width: 68px;
+            height: 26px;
+        }
+        .auto-style9 {
+            width: 170px;
+            height: 26px;
+        }
+        .auto-style10 {
+            width: 1406px;
+        }
     </style>
     <div id="CheckoutBody">
-    <table cellpadding="2" class="auto-style1">
+    &nbsp;
+        <table cellpadding="2" class="auto-style5">
+            <tr>
+                <td>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="541px">
+                        <Columns>
+                            <asp:BoundField DataField="item" HeaderText="item" SortExpression="item" />
+                            <asp:BoundField DataField="price" DataFormatString="{0:C}" HeaderText="price" SortExpression="price" />
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BakeryConnectionString %>" SelectCommand="SELECT * FROM [buildOrder]"></asp:SqlDataSource>
+                </td>
+                <td class="auto-style6">
+                    <br />
+                </td>
+                <td class="auto-style10">
+    <table cellpadding="2" class="auto-style1" style="clear: left">
         <tr>
             <td class="auto-style3">
                 <asp:Label ID="Label_item_1" runat="server" Text="Label" Visible="False"></asp:Label>
@@ -41,13 +81,13 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style3">
+            <td class="auto-style7">
                 <asp:Label ID="Label_item_4" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style4">
+            <td class="auto-style8">
                 <asp:Label ID="Label_qty_4" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style2">
+            <td class="auto-style9">
                 <asp:Label ID="Label_pr_4" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
         </tr>
@@ -63,24 +103,37 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style3">
+            <td class="auto-style7">
                 <asp:Label ID="Label_item_6" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style4">
+            <td class="auto-style8">
                 <asp:Label ID="Label_qty_6" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style2">
+            <td class="auto-style9">
                 <asp:Label ID="Label_pr_6" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
         </tr>
     </table>
 
 
-    <asp:Label ID="Label_total_price" runat="server" Text="Label"></asp:Label><br />
+                </td>
+            </tr>
+        </table>
+
+
+    <asp:Label ID="Label_total_price" runat="server" Text="Label"></asp:Label>
+        <br />
 
 
 
-    <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" />
+    <asp:Button ID="Button_to_payment" runat="server" OnClick="Button_to_payment_Click" Text="Proceed to Payment Details" BackColor="AntiqueWhite" ForeColor="#9C3A3A" />
+
+
+        <br />
+
+
+
+    
 
 
 </asp:Content>

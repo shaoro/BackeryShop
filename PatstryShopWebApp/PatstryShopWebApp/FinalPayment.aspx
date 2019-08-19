@@ -69,7 +69,7 @@
 
 
         <br />
-        <asp:Button ID="Button_process_payment" runat="server" Text="Process Payment" OnClick="Button_process_payment_Click" />
+        <asp:Button ID="Button_process_payment" runat="server" Text="Process Payment" OnClick="Button_process_payment_Click" BackColor="AntiqueWhite" ForeColor="#9C3A3A" />
 
 
         </div>
