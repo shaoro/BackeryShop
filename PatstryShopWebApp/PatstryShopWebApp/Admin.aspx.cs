@@ -23,6 +23,7 @@ namespace PatstryShopWebApp
                     if (!IsPostBack)
                     {
                         loadPastry();
+                        lblError.Text = "";
                     }
                 }
                 else
@@ -319,7 +320,7 @@ namespace PatstryShopWebApp
                         }
                         else
                         {
-                            cmd.CommandText = "INSERT INTO Pastry(name, description, price, categoryId, image) " +
+                            cmd.CommandText = "INSERT INTO Pastry(name, description, price, categoryId, imageUrl) " +
                                               "VALUES (@name, @des, @price, @cate, @image);";
                             cmd.Parameters.AddWithValue("@image", imageUpload.FileName);
                         }
@@ -363,7 +364,7 @@ namespace PatstryShopWebApp
                         else
                         {
                             cmd.CommandText = "Update Pastry " +
-                                          "Set name = @name, description = @des, price = @price, categoryId = @cate, image = @image" +
+                                          "Set name = @name, description = @des, price = @price, categoryId = @cate, imageUrl = @image" +
                                               "Where ID = @ID;";
                             cmd.Parameters.AddWithValue("@image", imageUpload.FileName);
                         }
