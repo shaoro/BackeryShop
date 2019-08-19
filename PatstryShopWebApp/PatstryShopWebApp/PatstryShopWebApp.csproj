@@ -69,9 +69,9 @@
   <ItemGroup>
     <Content Include="Admin.aspx" />
     <Content Include="Checkout.aspx" />
+    <Content Include="FinalPayment.aspx" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="ForgotPassword.aspx" />
-    <Content Include="FinalPayment.aspx" />
     <Content Include="image\background2.jpeg" />
     <Content Include="image\Cakes\chocmousse.jpg" />
     <Content Include="image\Cupcakes\CakePops.jpg" />
