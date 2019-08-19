@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace PatstryShopWebApp
@@ -34,12 +30,7 @@ namespace PatstryShopWebApp
             {
                 Response.Redirect("Login.aspx");
             }
-
-
-
-
         }
-
 
         protected void btnItem_Click(object sender, EventArgs e)
         {
